@@ -704,3 +704,15 @@ def get_latest_access_url(catalog_url, access_method):
 
     """
     return TDSCatalog(catalog_url).latest.access_urls[access_method]
+
+
+class servers(object):
+    """List of public/government THREDDS servers for convenience."""
+
+    def __init__(self):
+        self.unidata_main = 'http://thredds.ucar.edu/thredds/'
+        self.unidata_dev = 'http://thredds-dev.unidata.ucar.edu/thredds/'
+        self.unidata_test = 'http://thredds-test.unidata.ucar.edu/thredds/'
+        self.ncei = 'https://www.ncei.noaa.gov/thredds/'
+        self.jpl = 'https://thredds.jpl.nasa.gov/thredds/'
+        self.nodc = 'https://data.nodc.noaa.gov/thredds/'
